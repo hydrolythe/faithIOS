@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "icoon_gebruikergebruikerhalf.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "icoon_gebruikergebruikerheel.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "icoon_gebruikergebruikeranderhalf.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

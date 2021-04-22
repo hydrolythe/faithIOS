@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "filter_icoon_tekeningentekeninghalf.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "filter_icoon_tekeningentekeningheel.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "filter_icoon_tekeningentekeninganderhalf.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

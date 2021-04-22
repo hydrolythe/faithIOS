@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "loading spinnerspinnerhalf.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "loading spinnerspinnerheel.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "loading spinnerspinneranderhalf.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

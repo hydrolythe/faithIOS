@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "filter_icoon_audioaudiohalf.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "filter_icoon_audioaudioheel.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "filter_icoon_audioaudioanderhalf.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
