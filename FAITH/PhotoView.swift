@@ -28,11 +28,13 @@ struct PhotoView: View {
                     CaptureImageView(isShown: $showCaptureImageView,
                                         image: $uiimage)
                 VStack{
-                    Button(action:{
-                        recording = viewModel.saveImage(imageName:Date().toString(dateFormat: "dd-MM-YY_'at'_HH:mm:ss).jpeg"), image: uiimage)
-                    }, label: {
-                        Image("opslagicoon")
-                    })
+                    if(uiimage != UIImage()){
+                        Button(action:{
+                            recording = viewModel.saveImage(imageName:Date().toString(dateFormat: "dd-MM-YY_'at'_HH:mm:ss).jpeg"), image: uiimage)
+                        }, label: {
+                            Image("opslagicoon")
+                        })
+                    }
                     Button(action:{
                         self.showCaptureImageView.toggle()
                     }, label: {
