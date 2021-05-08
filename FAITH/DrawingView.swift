@@ -15,6 +15,7 @@ struct DrawingView: View {
     @State private var drawings: [Drawing] = [Drawing]()
     @ObservedObject var drawingViewModel: DrawingViewModel
     @State var recording = Recording(fileURL: nil, createdAt: nil)
+    @State var backgroundImage = UIImage()
     var body: some View {
         HStack{
             if(recording.fileURL==nil){
@@ -118,7 +119,8 @@ struct DrawingView: View {
                             self.add(drawing: self.currentDrawing, toPath: &path)
                         }
                         .stroke(self.color, lineWidth: self.lineWidth)
-                            .background(Color(white: 0.95))
+                        .background(Image(uiImage: backgroundImage))
+                        .background(Color(white: 0.95))
                             .gesture(
                                 DragGesture(minimumDistance: 0.1)
                                     .onChanged({ (value) in
@@ -132,9 +134,15 @@ struct DrawingView: View {
                                         self.drawings.append(self.currentDrawing)
                                         self.currentDrawing = Drawing()
                                     })
-                        )
+                            )
                     }
                 .frame(maxHeight: .infinity).cornerRadius(60)
+                Button(action:{
+                    backgroundImage = UIImage(systemName: "play.fill") ?? UIImage()
+                }, label: {
+                        Image(systemName: "play.fill").frame(width:29,height:40,alignment: .center)
+                    
+                })
                 Button(action:{
                     recording = drawingViewModel.saveImage(drawings:drawings, imageName:Date().toString(dateFormat: "dd-MM-YY_'at'_HH:mm:ss).jpeg"))
                 }
