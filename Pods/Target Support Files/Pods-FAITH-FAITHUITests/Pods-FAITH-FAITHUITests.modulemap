@@ -1,0 +1,6 @@
+framework module Pods_FAITH_FAITHUITests {
+  umbrella header "Pods-FAITH-FAITHUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

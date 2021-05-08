@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct DetailArray:Codable{
+    let details: [ExpandedDetail]
+}

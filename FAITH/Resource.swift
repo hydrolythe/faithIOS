@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Resource{
+    let resourceState: ResourceState
+    let message: String?
+}

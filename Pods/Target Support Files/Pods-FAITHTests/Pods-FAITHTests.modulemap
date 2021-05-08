@@ -1,0 +1,6 @@
+framework module Pods_FAITHTests {
+  umbrella header "Pods-FAITHTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

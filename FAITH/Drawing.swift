@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import PencilKit
+
+struct Drawing {
+    var points: [CGPoint] = [CGPoint]()
+}

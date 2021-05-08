@@ -7,7 +7,25 @@
 		<key>FAITH.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>24</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3E8F4C3825F7B3000079AAD1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3E8F4C4E25F7B3020079AAD1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3E8F4C5925F7B3020079AAD1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

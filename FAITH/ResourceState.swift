@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum ResourceState{
+    case LOADING
+    case SUCCESS
+    case ERROR
+}
