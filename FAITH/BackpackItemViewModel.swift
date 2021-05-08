@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import FirebaseAuth
 
 class BackpackItemViewModel:ObservableObject{
     private let url = URL(string:"http://localhost:8080/backpack")!
@@ -26,7 +25,12 @@ class BackpackItemViewModel:ObservableObject{
         }
         let task = URLSession.shared.dataTask(with: request){(data,response,error) in
             if let data = data{
-                try? data.write(to:link)
+                do{
+                    try data.write(to:link)
+                }
+                catch{
+                    print("Failed to overwrite data")
+                }
             }
         }
         task.resume()

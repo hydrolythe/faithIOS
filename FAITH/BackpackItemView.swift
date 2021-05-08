@@ -25,10 +25,10 @@ struct BackpackItemView: View {
             case "AUDIO" : NavigationLink(destination:ViewAudioView(audioRecorder:ViewAudioViewModel(recording: viewModel.getResource(detail: detail))), label:{
                 Image("Audioicoon")
             })            
-            case "DRAWING": NavigationLink(destination:ViewDrawingView(recording:viewModel.getResource(detail:detail))){
+            case "DRAWING": NavigationLink(destination:ScreenView(recording:viewModel.getResource(detail:detail))){
                     Image(uiImage: UIImage(data:Data(base64Encoded: detail.thumbnail ?? "", options: Data.Base64DecodingOptions.ignoreUnknownCharacters) ?? Data()) ?? UIImage())
                 }
-            case "PHOTO" : NavigationLink(destination:ViewDrawingView(recording:viewModel.getResource(detail:detail))){                Image(uiImage: UIImage(data:Data(base64Encoded: detail.thumbnail ?? "", options: Data.Base64DecodingOptions.ignoreUnknownCharacters) ?? Data()) ?? UIImage())
+            case "PHOTO" : NavigationLink(destination:ScreenView(recording:viewModel.getResource(detail:detail))){                Image(uiImage: UIImage(data:Data(base64Encoded: detail.thumbnail ?? "", options: Data.Base64DecodingOptions.ignoreUnknownCharacters) ?? Data()) ?? UIImage())
             }
             case "TEXT" : Image("Texticoon")
             default:
