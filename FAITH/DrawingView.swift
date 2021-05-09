@@ -138,7 +138,12 @@ struct DrawingView: View {
                     }
                 .frame(maxHeight: .infinity).cornerRadius(60)
                 Button(action:{
-                    backgroundImage = UIImage(systemName: "play.fill") ?? UIImage()
+                    if(backgroundImage==UIImage(systemName: "play.fill")){
+                        backgroundImage = UIImage()
+                    }
+                    else{
+                        backgroundImage = UIImage(systemName: "play.fill") ?? UIImage()
+                    }
                 }, label: {
                         Image(systemName: "play.fill").frame(width:29,height:40,alignment: .center)
                     
