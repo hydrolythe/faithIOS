@@ -11,7 +11,7 @@ import AVFoundation
 
 class ViewAudioViewModel: ObservableObject {
     var recording : Recording
-    var audioPlayer : AVAudioPlayer!
+    var audioPlayer : AVPlayer!
     @Published var isPlaying = false
     init(recording:Recording){
         self.recording = recording
@@ -21,7 +21,8 @@ class ViewAudioViewModel: ObservableObject {
             if let filePath = self.recording.fileURL?.path, FileManager().fileExists(atPath: filePath) {
             do {
                 try playbackSession.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
-                audioPlayer = try! AVAudioPlayer(contentsOf: recording.fileURL!)
+                let playerItem = CachingPlayerItem.init(data: try Data(contentsOf: recording.fileURL!), mimeType: "audio/mpeg", fileExtension: ".mp3")
+                audioPlayer = AVPlayer(playerItem: playerItem)
                 audioPlayer.play()
                 isPlaying = true
             } catch {
@@ -32,7 +33,7 @@ class ViewAudioViewModel: ObservableObject {
             }
     }
     func stopPlayback() {
-        audioPlayer.stop()
+        audioPlayer.pause()
         isPlaying = false
     }
 }
